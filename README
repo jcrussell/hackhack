@@ -1,0 +1,29 @@
+hackhack
+========
+
+Utilities that mess with hack's memory to give the user an advantage.
+
+
+Usage
+-----
+
+sudo full_health.py [PID]
+
+The utility attaches to the process specified by PID or the first ``hack''
+process it finds using python-ptrace. It then updates the user's health to full
+health. Currently, the locations of the user's health and full health are
+hard-coded based on addresses found in GDB. Eventually, it would be nice to
+scan memory to find the correct addresses automatically.
+
+
+Dependencies
+------------
+
+python-ptrace
+python-psutil
+
+
+License
+-------
+
+Code is available under the MIT license, see LICENSE for details.
